@@ -130,3 +130,5 @@ public class RockPaperScissorsGameLab6
 		input.close();
 	}
 }
+
+// If the user decides to play 3 games, and the computer wins the first 2, you made him play the 3rd game...see if you can improve the game
