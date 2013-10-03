@@ -19,6 +19,8 @@ public class RockPaperScissorsGameLab6
 		
 		System.out.print("Welcome to the Rock, Paper, Scissors Game. How many games do you want to play? ");
 		games = input.nextInt();
+		int mean = games / 2;
+		System.out.println("Let the games begin.");
 				
 		for (int i = 1; i <= games; i++)
 		{
@@ -107,9 +109,19 @@ public class RockPaperScissorsGameLab6
 					System.out.println("No winner.");
 				}
 			}
+			
+			if (cpu_winnings > mean || your_winnings > mean)
+			{
+				System.out.println("A winner has been determined. No further plays required.");
+				break;
+			}
+			
+			if (i == games)
+			{
+				System.out.println("That is all the games. Calculating results...");
+			}
 		}
 		
-		System.out.println("That is all the games. Calculating results...");
 		System.out.println("RESULTS:");
 		System.out.println("--------");
 		System.out.println("Your wins: " + your_winnings);
@@ -130,5 +142,3 @@ public class RockPaperScissorsGameLab6
 		input.close();
 	}
 }
-
-// If the user decides to play 3 games, and the computer wins the first 2, you made him play the 3rd game...see if you can improve the game
