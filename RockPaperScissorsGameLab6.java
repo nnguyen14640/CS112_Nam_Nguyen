@@ -142,3 +142,5 @@ public class RockPaperScissorsGameLab6
 		input.close();
 	}
 }
+
+// Good, but if you use mean in a whie loop instead of the for loop, there is no need for break.
