@@ -1,3 +1,6 @@
+// Nam Nguyen
+// Cmpr 112
+
 import java.util.Random;
 import java.util.Scanner;
 
