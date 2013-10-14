@@ -19,6 +19,8 @@ public class RockPaperScissorsGameLab2
 		int current_game = 0;
 		boolean continuation = true;
 		String statistic = null;
+		String your_history = "";
+		String cpu_history = "";
 		String final_statistic_you = null;
 		String final_statistic_cpu = null;
 		String final_statistic_ties = null;
@@ -35,7 +37,19 @@ public class RockPaperScissorsGameLab2
 		JOptionPane.showMessageDialog(null, "Let the games begin.");
 		int [] your_moves = new int[3];
 		int [] cpu_moves = new int[3];
+		String[] your_move_list = new String[games];
+		String[] cpu_move_list = new String[games];
 		String[] moves = {"ROCK", "PAPER", "SCISSORS"};
+		
+		for (int i = 0; i < your_move_list.length; i++)
+		{
+			your_move_list[i] = "";
+		}
+		
+		for (int j = 0; j < cpu_move_list.length; j++)
+		{
+			cpu_move_list[j] = "";
+		}
 		
 		while (continuation == true)
 		{
@@ -87,6 +101,7 @@ public class RockPaperScissorsGameLab2
 			if (your_hand.equals("ROCK"))
 			{
 				your_moves[0]++;
+				your_move_list[current_game] = your_hand;
 				
 				if (cpu_hand.equals("ROCK"))
 				{
@@ -107,6 +122,7 @@ public class RockPaperScissorsGameLab2
 			else if (your_hand.equals("PAPER"))
 			{
 				your_moves[1]++;
+				your_move_list[current_game] = your_hand;
 				
 				if (cpu_hand.equals("ROCK"))
 				{
@@ -127,6 +143,7 @@ public class RockPaperScissorsGameLab2
 			else if (your_hand.equals("SCISSORS"))
 			{
 				your_moves[2]++;
+				your_move_list[current_game] = your_hand;
 				
 				if (cpu_hand.equals("ROCK"))
 				{
@@ -146,6 +163,7 @@ public class RockPaperScissorsGameLab2
 			}
 			
 			JOptionPane.showMessageDialog(null, statistic);
+			cpu_move_list[current_game] = cpu_hand;
 			current_game++;
 			
 			if (cpu_winnings > mean || your_winnings > mean)
@@ -161,16 +179,40 @@ public class RockPaperScissorsGameLab2
 			}
 		}
 		
+		for (int i = 0; i < your_move_list.length; i++)
+		{	
+			if (i % 10 == 0)
+			{
+				your_history += "\n";
+			}
+			
+			your_history += your_move_list[i] + "  ";
+		}
+		
+		for (int j = 0; j < cpu_move_list.length; j++)
+		{
+			if (j % 10 == 0)
+			{
+				cpu_history += "\n";
+			}
+			
+			cpu_history += cpu_move_list[j] + "  ";
+		}
+		
 		final_statistic_you = "Rock: " + your_moves[0] + "\n" + "Paper: " + your_moves[1] + "\n" + "Scissors: " + your_moves[2];
 		final_statistic_cpu = "Rock: " + cpu_moves[0] + "\n" + "Paper: " + cpu_moves[1] + "\n" + "Scissors: " + cpu_moves[2];
-		JOptionPane.showMessageDialog(null, "Moves Used:" + "\n" + "-----------" + "\n" + "You" + "\n" +
-				final_statistic_you + "\n" + "CPU" + "\n" + final_statistic_cpu);
+		JOptionPane.showMessageDialog(null, "Moves Used:" + "\n" + "------------------" + "\n" +
+				"You" + "\n" + final_statistic_you + "\n" + "CPU" + "\n" + final_statistic_cpu);
+		
+		JOptionPane.showMessageDialog(null, "Game History:" + "\n" + "--------------------" + "\n" +
+				"Your hands (earliest to most recent):" + "\n" + your_history + "\n\n" +
+				"CPU hands (earliest to most recent):" + "\n" + cpu_history);
 		
 		final_statistic_you = "Your wins: " + your_winnings;
 		final_statistic_cpu = "CPU wins: " + cpu_winnings;
 		final_statistic_ties = "Ties: " + ties;
-		JOptionPane.showMessageDialog(null, "Results:" + "\n" + "--------" + "\n" + final_statistic_you +
-				"\n" + final_statistic_cpu + "\n" + final_statistic_ties);
+		JOptionPane.showMessageDialog(null, "Results:" + "\n" + "-----------" + "\n" +
+				final_statistic_you + "\n" + final_statistic_cpu + "\n" + final_statistic_ties);
 
 		if (your_winnings > cpu_winnings)
 		{
