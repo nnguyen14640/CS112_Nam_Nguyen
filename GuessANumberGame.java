@@ -98,3 +98,5 @@ public class GuessANumberGame
 		input.close();
 	}
 }
+
+//tries[i] = attempts; <--- You need to save the guess, Nam.
