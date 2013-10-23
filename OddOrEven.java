@@ -3,12 +3,22 @@
 
 public class OddOrEven 
 {
-	public static void main(String[] args)
+	private int m_val;
+	
+	public void setValue(int number)
 	{
-		Odd isOdd = new Odd();
-		Even isEven = new Even();
-		
-		isEven.printEven();
-		isOdd.printOdd();
+		m_val = number;
+	}
+	
+	public String OddEven()
+	{
+		if(m_val % 2 == 0)
+		{
+			return "Even";
+		}
+		else
+		{
+			return "Odd";
+		}
 	}
 }
