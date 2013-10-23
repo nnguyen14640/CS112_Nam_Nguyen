@@ -8,7 +8,7 @@ public class OddOrEvenTest
 	public static void main(String[] args)
 	{
 		Scanner input = new Scanner(System.in);
-		OddOrEven decision = new OddOrEven();
+		OddOrEven decision = new OddOrEven(0);
 		int numbers;
 		
 		System.out.print("Please enter a number: ");

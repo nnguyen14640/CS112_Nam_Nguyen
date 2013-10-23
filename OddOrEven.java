@@ -5,6 +5,11 @@ public class OddOrEven
 {
 	private int m_val;
 	
+	public OddOrEven(int input_number)
+	{
+		m_val = input_number;
+	}
+	
 	public void setValue(int number)
 	{
 		m_val = number;
