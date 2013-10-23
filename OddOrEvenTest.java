@@ -9,6 +9,7 @@ public class OddOrEvenTest
 	{
 		Scanner input = new Scanner(System.in);
 		OddOrEven decision = new OddOrEven(0);
+		OddOrEven decision2 = new OddOrEven();
 		int numbers;
 		
 		System.out.print("Please enter a number: ");
@@ -16,5 +17,7 @@ public class OddOrEvenTest
 		decision.setValue(numbers);
 		
 		System.out.println(decision.OddEven());
+		
+		System.out.println("Random number: " + decision2.getRValue() + " is " + decision2.OddsOrEvens());
 	}
 }
