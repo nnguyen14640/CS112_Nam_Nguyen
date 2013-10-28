@@ -132,5 +132,7 @@ public class OddOrEvenGame
 		{
 			System.out.println("Luck was not on your side today. Better luck next time.");
 		}
+		
+		input.close();
 	}
 }

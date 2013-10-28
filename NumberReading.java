@@ -30,5 +30,7 @@ public class NumberReading
 				m = m + 1;
 			}
 		}
+		
+		input.close();
 	}
 }

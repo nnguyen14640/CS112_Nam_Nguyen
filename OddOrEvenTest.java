@@ -19,5 +19,6 @@ public class OddOrEvenTest
 		System.out.println(decision.OddEven());
 		
 		System.out.println("Random number: " + decision2.getRValue() + " is " + decision2.OddsOrEvens());
+		input.close();
 	}
 }
