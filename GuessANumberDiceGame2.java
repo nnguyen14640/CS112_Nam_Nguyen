@@ -3,7 +3,7 @@
 
 import java.util.Scanner;
 
-public class GuessANumberDiceGame 
+public class GuessANumberDiceGame2 
 {
 	public static void main(String[] args)
 	{
