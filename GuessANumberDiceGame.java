@@ -21,7 +21,7 @@ public class GuessANumberDiceGame
 		gameplay_loop:
 		while (continuation.equals("Y"))
 		{
-			Dice die = new Dice();
+			Dice2 die = new Dice2();
 			boolean valid = false;
 			cpu_number = die.getCPUValue();
 			System.out.print("The CPU has rolled a 6-sided die. Do you know what number is it? ");
