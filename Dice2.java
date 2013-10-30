@@ -3,7 +3,7 @@
 
 import java.util.Random;
 
-public class Dice 
+public class Dice2 
 {
 	private int die_value;
 	Random randomizer = new Random();
