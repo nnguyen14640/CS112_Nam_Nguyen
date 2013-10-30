@@ -8,7 +8,7 @@ public class Dice2
 	private int die_value;
 	Random randomizer = new Random();
 	
-	public Dice()
+	public Dice2()
 	{
 		die_value = randomizer.nextInt(6) + 1;
 	}
