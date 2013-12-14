@@ -539,6 +539,9 @@ public class AcceptableWins extends GridlineInterface
 			}
 		}
 		
+		
+// Good
+		
 		return winningpair;
 	}
 }
