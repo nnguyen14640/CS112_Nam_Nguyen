@@ -31,3 +31,5 @@ public class Markers
 		return player2marker;
 	}
 }
+
+// Not sure why this is necessary
