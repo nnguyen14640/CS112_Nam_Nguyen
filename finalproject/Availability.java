@@ -86,3 +86,6 @@ public class Availability extends GridlineInterface
 		return existence;
 	}
 }
+
+
+// Good
